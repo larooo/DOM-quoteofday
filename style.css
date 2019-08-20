@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Barriecito&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Tangerine", cursive;
+  background: url(wallpaper.jpg) no-repeat center center fixed;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  grid-column-start: 5;
+  grid-row: 7/8;
+  font-family: "Barriecito", cursive;
+  font-size: 2em;
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  border: 1px black solid;
+
+  height: 100%;
+  background-size: cover;
+}
+#quote-text {
+  grid-column: 2/4;
+  grid-row: 6/8;
+  font-size: 3em;
+  text-shadow: 1px 1px 10px #313030;
+  text-align: center;
+}
+
+@media screen and (max-width: 560px) {
+  .container {
+    background: url(wallpaper-mobile.jpg) no-repeat center center fixed;
+    grid-column-start: 3;
+    grid-row-start: 4;
+  }
+  button {
+    grid-column: 2/4;
+    grid-row: 7/8;
+  }
+
+  #quote-text {
+    grid-row: 2/4;
+  }
+}
